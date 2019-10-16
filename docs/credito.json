@@ -1,1 +1,1181 @@
-{"openapi":"3.0.0","info":{"title":"Consulta crédito","description":"API de consulta crédito da Tecnospeed","version":"1.0.0"},"components":{},"externalDocs":{"url":"https://atendimento.tecnospeed.com.br/hc/pt-br/categories/360001954693-Consulta-de-Cr%C3%A9dito","description":"Mais informações sobre a API"},"servers":[{"url":"http://localhost/"}],"paths":{"*":{"options":{"responses":{"200":{"description":"default response"}}}},"/status":{"get":{"responses":{"200":{"description":"default response"}}}},"/consumo":{"get":{"responses":{"2xx":{"content":{"application/json":{"schema":{"type":"object","properties":{"searchs":{"type":"array","items":{"type":"object","properties":{"tipo":{"type":"string"},"documento":{"type":"string"},"status":{"type":"string"},"valor":{"type":"number"},"cadastro":{"type":"object","properties":{"razaoSocial":{"type":"string"},"cnpj":{"type":"string"}}}}}},"metadata":{"type":"object","properties":{"sum":{"type":"number"},"total":{"type":"number"}}}}}}}},"4xx":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"}}}}}}},"parameters":[{"name":"cnpj","in":"query","required":true,"schema":{"type":"string"}},{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}}]}},"/consultas":{"get":{"responses":{"401":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"}}}}}},"422":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"},"errors":{"type":"array","items":{"type":"object","properties":{"message":{"type":"string"},"internalCode":{"type":"number"}}}}}}}}}},"parameters":[{"name":"login","in":"query","required":true,"schema":{"type":"string"}},{"name":"senha","in":"query","required":true,"schema":{"type":"string"}},{"name":"tipo","in":"query","required":true,"schema":{"type":"string","enum":["1","2","3","4"]}},{"name":"documento","in":"query","required":true,"schema":{"type":"string","maxLength":15}},{"name":"uf","in":"query","schema":{"type":"string","enum":["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RO","RS","RR","SC","SE","SP","TO"]}},{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}}]}},"/consultas/homologacao":{"get":{"responses":{"401":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"}}}}}},"422":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"},"errors":{"type":"array","items":{"type":"object","properties":{"message":{"type":"string"},"internalCode":{"type":"number"}}}}}}}}}},"parameters":[{"name":"login","in":"query","required":true,"schema":{"type":"string"}},{"name":"senha","in":"query","required":true,"schema":{"type":"string"}},{"name":"tipo","in":"query","required":true,"schema":{"type":"string","enum":["1","2","3","4"]}},{"name":"documento","in":"query","required":true,"schema":{"type":"string","maxLength":15}},{"name":"uf","in":"query","schema":{"type":"string","enum":["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RO","RS","RR","SC","SE","SP","TO"]}},{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}}]}},"/consultas/assincrona":{"get":{"responses":{"200":{"description":"Default Response"}},"parameters":[{"name":"protocolo","in":"query","required":true,"schema":{"type":"string"}},{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}},{"name":"login","in":"header","required":true,"schema":{"type":"string"}},{"name":"password","in":"header","required":true,"schema":{"type":"string"}}]},"post":{"responses":{"2xx":{"content":{"application/json":{"schema":{"type":"object","properties":{"protocolo":{"type":"string"},"status":{"type":"string"},"documento":{"type":"string"},"codConsulta":{"type":"string"}}}}}}},"requestBody":{"content":{"application/json":{"schema":{"type":"object","required":["codConsulta","documento"],"properties":{"documento":{"type":"string"},"codConsulta":{"type":"string","enum":["1","2","3","4"]},"uf":{"type":"string","enum":["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RO","RS","RR","SC","SE","SP","TO"]}}}}},"required":true},"parameters":[{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}},{"name":"login","in":"header","required":true,"schema":{"type":"string"}},{"name":"password","in":"header","required":true,"schema":{"type":"string"}}]}},"/consultas/assincrona/homologacao":{"post":{"responses":{"2xx":{"content":{"application/json":{"schema":{"type":"object","properties":{"protocolo":{"type":"string"},"status":{"type":"string"},"documento":{"type":"string"},"codConsulta":{"type":"string"}}}}}}},"requestBody":{"content":{"application/json":{"schema":{"type":"object","required":["codConsulta","documento"],"properties":{"documento":{"type":"string"},"codConsulta":{"type":"string","enum":["1","2","3","4"]},"uf":{"type":"string","enum":["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RO","RS","RR","SC","SE","SP","TO"]}}}}},"required":true},"parameters":[{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}},{"name":"login","in":"header","required":true,"schema":{"type":"string"}},{"name":"password","in":"header","required":true,"schema":{"type":"string"}}]}},"/cadastros":{"get":{"responses":{"401":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"}}}}}},"422":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"},"errors":{"type":"array","items":{"type":"object","properties":{"message":{"type":"string"},"internalCode":{"type":"number"}}}}}}}}},"2xx":{"content":{"application/json":{"schema":{"type":"object","properties":{"nomeFantasia":{"type":"string"},"razaoSocial":{"type":"string"},"cnpj":{"type":"string"},"nomeRepresentante":{"type":"string"},"cpfRepresentante":{"type":"string"},"telefone":{"type":"string"},"email":{"type":"string"},"endereco":{"type":"string"},"numeroEndereco":{"type":"string"},"complementoEndereco":{"type":"string"},"bairro":{"type":"string"},"cep":{"type":"string"},"cidade":{"type":"string"},"uf":{"type":"string"},"nomeResponsavelContrato":{"type":"string"},"telefoneResponsavelContrato":{"type":"string"},"emailResponsavelContrato":{"type":"string"},"status":{"type":"string"},"statusCode":{"type":"number"}}}}}}},"parameters":[{"name":"cnpj","in":"query","required":true,"schema":{"type":"string"}},{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}}]},"post":{"responses":{"401":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"}}}}}},"422":{"content":{"application/json":{"schema":{"type":"object","properties":{"code":{"type":"number"},"message":{"type":"string"},"errors":{"type":"array","items":{"type":"object","properties":{"message":{"type":"string"},"internalCode":{"type":"number"}}}}}}}}},"2xx":{"content":{"application/json":{"schema":{"type":"object","properties":{"nomeFantasia":{"type":"string"},"razaoSocial":{"type":"string"},"cnpj":{"type":"string"},"nomeRepresentante":{"type":"string"},"cpfRepresentante":{"type":"string"},"telefone":{"type":"string"},"email":{"type":"string"},"endereco":{"type":"string"},"numeroEndereco":{"type":"string"},"complementoEndereco":{"type":"string"},"bairro":{"type":"string"},"cep":{"type":"string"},"cidade":{"type":"string"},"uf":{"type":"string"},"nomeResponsavelContrato":{"type":"string"},"telefoneResponsavelContrato":{"type":"string"},"emailResponsavelContrato":{"type":"string"},"status":{"type":"string"},"statusCode":{"type":"number"}}}}}}},"requestBody":{"content":{"application/json":{"schema":{"type":"object","required":["nomeFantasia","razaoSocial","cnpj","nomeRepresentante","cpfRepresentante","telefone"],"properties":{"nomeFantasia":{"type":"string","minLength":10,"maxLength":200},"razaoSocial":{"type":"string","minLength":10,"maxLength":200},"cnpj":{"type":"string","maxLength":14},"nomeRepresentante":{"type":"string","minLength":10,"maxLength":20},"cpfRepresentante":{"type":"string","minLength":11,"maxLength":14},"telefone":{"type":"string","minLength":10,"maxLength":12},"email":{"type":"string","format":"email","minLength":10,"maxLength":200},"endereco":{"type":"string","minLength":10,"maxLength":200},"numeroEndereco":{"type":"string","minLength":1,"maxLength":10},"complementoEndereco":{"type":"string","maxLength":200},"bairro":{"type":"string","minLength":3,"maxLength":200},"cep":{"type":"string","maxLength":8},"cidade":{"type":"string","minLength":3,"maxLength":200},"uf":{"type":"string","enum":["AC","AL","AM","AP","BA","CE","DF","ES","GO","MA","MT","MS","MG","PA","PB","PR","PE","PI","RJ","RN","RO","RS","RR","SC","SE","SP","TO"]},"nomeResponsavelContrato":{"type":"string","minLength":10,"maxLength":200},"telefoneResponsavelContrato":{"type":"string","minLength":10,"maxLength":12},"emailResponsavelContrato":{"type":"string","format":"email","minLength":10,"maxLength":200}}}}},"required":true},"parameters":[{"name":"cnpjsh","in":"header","required":true,"schema":{"type":"string"}},{"name":"tokensh","in":"header","required":true,"schema":{"type":"string"}}]}}}}
+// 20191016101359
+// http://localhost:3000/documentation/json
+
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Consulta crédito",
+    "description": "API de consulta crédito da Tecnospeed",
+    "version": "1.0.0"
+  },
+  "components": {
+    
+  },
+  "externalDocs": {
+    "url": "https://atendimento.tecnospeed.com.br/hc/pt-br/categories/360001954693-Consulta-de-Cr%C3%A9dito",
+    "description": "Mais informações sobre a API"
+  },
+  "servers": [
+    {
+      "url": "http://localhost/"
+    }
+  ],
+  "paths": {
+    "*": {
+      "options": {
+        "responses": {
+          "200": {
+            "description": "default response"
+          }
+        }
+      }
+    },
+    "/consumo": {
+      "get": {
+        "responses": {
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "searchs": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "tipo": {
+                            "type": "string"
+                          },
+                          "documento": {
+                            "type": "string"
+                          },
+                          "status": {
+                            "type": "string"
+                          },
+                          "valor": {
+                            "type": "number"
+                          },
+                          "cadastro": {
+                            "type": "object",
+                            "properties": {
+                              "razaoSocial": {
+                                "type": "string"
+                              },
+                              "cnpj": {
+                                "type": "string"
+                              }
+                            }
+                          }
+                        }
+                      }
+                    },
+                    "metadata": {
+                      "type": "object",
+                      "properties": {
+                        "sum": {
+                          "type": "number"
+                        },
+                        "total": {
+                          "type": "number"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "4xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "cnpj",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/consultas": {
+      "get": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "login",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "senha",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            }
+          },
+          {
+            "name": "documento",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 15
+            }
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "AC",
+                "AL",
+                "AM",
+                "AP",
+                "BA",
+                "CE",
+                "DF",
+                "ES",
+                "GO",
+                "MA",
+                "MT",
+                "MS",
+                "MG",
+                "PA",
+                "PB",
+                "PR",
+                "PE",
+                "PI",
+                "RJ",
+                "RN",
+                "RO",
+                "RS",
+                "RR",
+                "SC",
+                "SE",
+                "SP",
+                "TO"
+              ]
+            }
+          },
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjUsuario",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/consultas/homologacao": {
+      "get": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "login",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "senha",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tipo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "enum": [
+                "1",
+                "2",
+                "3",
+                "4"
+              ]
+            }
+          },
+          {
+            "name": "documento",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "maxLength": 15
+            }
+          },
+          {
+            "name": "uf",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "AC",
+                "AL",
+                "AM",
+                "AP",
+                "BA",
+                "CE",
+                "DF",
+                "ES",
+                "GO",
+                "MA",
+                "MT",
+                "MS",
+                "MG",
+                "PA",
+                "PB",
+                "PR",
+                "PE",
+                "PI",
+                "RJ",
+                "RN",
+                "RO",
+                "RS",
+                "RR",
+                "SC",
+                "SE",
+                "SP",
+                "TO"
+              ]
+            }
+          },
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjUsuario",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/consultas/assincrona": {
+      "get": {
+        "responses": {
+          "200": {
+            "description": "Default Response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "protocolo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjUsuario",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "protocolo": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "documento": {
+                      "type": "string"
+                    },
+                    "codConsulta": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "codConsulta",
+                  "documento"
+                ],
+                "properties": {
+                  "documento": {
+                    "type": "string"
+                  },
+                  "codConsulta": {
+                    "type": "string",
+                    "enum": [
+                      "1",
+                      "2",
+                      "3",
+                      "4"
+                    ]
+                  },
+                  "uf": {
+                    "type": "string",
+                    "enum": [
+                      "AC",
+                      "AL",
+                      "AM",
+                      "AP",
+                      "BA",
+                      "CE",
+                      "DF",
+                      "ES",
+                      "GO",
+                      "MA",
+                      "MT",
+                      "MS",
+                      "MG",
+                      "PA",
+                      "PB",
+                      "PR",
+                      "PE",
+                      "PI",
+                      "RJ",
+                      "RN",
+                      "RO",
+                      "RS",
+                      "RR",
+                      "SC",
+                      "SE",
+                      "SP",
+                      "TO"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "parameters": [
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "login",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjusuario",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/consultas/assincrona/homologacao": {
+      "post": {
+        "responses": {
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "protocolo": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    },
+                    "documento": {
+                      "type": "string"
+                    },
+                    "codConsulta": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "codConsulta",
+                  "documento"
+                ],
+                "properties": {
+                  "documento": {
+                    "type": "string"
+                  },
+                  "codConsulta": {
+                    "type": "string",
+                    "enum": [
+                      "1",
+                      "2",
+                      "3",
+                      "4"
+                    ]
+                  },
+                  "uf": {
+                    "type": "string",
+                    "enum": [
+                      "AC",
+                      "AL",
+                      "AM",
+                      "AP",
+                      "BA",
+                      "CE",
+                      "DF",
+                      "ES",
+                      "GO",
+                      "MA",
+                      "MT",
+                      "MS",
+                      "MG",
+                      "PA",
+                      "PB",
+                      "PR",
+                      "PE",
+                      "PI",
+                      "RJ",
+                      "RN",
+                      "RO",
+                      "RS",
+                      "RR",
+                      "SC",
+                      "SE",
+                      "SP",
+                      "TO"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "parameters": [
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "login",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "password",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjusuario",
+            "in": "header",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/cadastros": {
+      "get": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nomeFantasia": {
+                      "type": "string"
+                    },
+                    "razaoSocial": {
+                      "type": "string"
+                    },
+                    "cnpj": {
+                      "type": "string"
+                    },
+                    "nomeRepresentante": {
+                      "type": "string"
+                    },
+                    "cpfRepresentante": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "endereco": {
+                      "type": "string"
+                    },
+                    "numeroEndereco": {
+                      "type": "string"
+                    },
+                    "complementoEndereco": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "cidade": {
+                      "type": "string"
+                    },
+                    "uf": {
+                      "type": "string"
+                    },
+                    "nomeResponsavelContrato": {
+                      "type": "string"
+                    },
+                    "telefoneResponsavelContrato": {
+                      "type": "string"
+                    },
+                    "emailResponsavelContrato": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "cnpj",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "nomeFantasia": {
+                      "type": "string"
+                    },
+                    "razaoSocial": {
+                      "type": "string"
+                    },
+                    "cnpj": {
+                      "type": "string"
+                    },
+                    "nomeRepresentante": {
+                      "type": "string"
+                    },
+                    "cpfRepresentante": {
+                      "type": "string"
+                    },
+                    "telefone": {
+                      "type": "string"
+                    },
+                    "email": {
+                      "type": "string"
+                    },
+                    "endereco": {
+                      "type": "string"
+                    },
+                    "numeroEndereco": {
+                      "type": "string"
+                    },
+                    "complementoEndereco": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "cidade": {
+                      "type": "string"
+                    },
+                    "uf": {
+                      "type": "string"
+                    },
+                    "nomeResponsavelContrato": {
+                      "type": "string"
+                    },
+                    "telefoneResponsavelContrato": {
+                      "type": "string"
+                    },
+                    "emailResponsavelContrato": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "nomeFantasia",
+                  "razaoSocial",
+                  "cnpj",
+                  "nomeRepresentante",
+                  "cpfRepresentante",
+                  "telefone",
+                  "nomeResponsavelContrato",
+                  "telefoneResponsavelContrato",
+                  "emailResponsavelContrato"
+                ],
+                "properties": {
+                  "nomeFantasia": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 200
+                  },
+                  "razaoSocial": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 200
+                  },
+                  "cnpj": {
+                    "type": "string",
+                    "maxLength": 14
+                  },
+                  "nomeRepresentante": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 20
+                  },
+                  "cpfRepresentante": {
+                    "type": "string",
+                    "minLength": 11,
+                    "maxLength": 14
+                  },
+                  "telefone": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 12
+                  },
+                  "email": {
+                    "type": "string",
+                    "format": "email",
+                    "minLength": 10,
+                    "maxLength": 200
+                  },
+                  "endereco": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 200
+                  },
+                  "numeroEndereco": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 10
+                  },
+                  "complementoEndereco": {
+                    "type": "string",
+                    "maxLength": 200
+                  },
+                  "bairro": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 200
+                  },
+                  "cep": {
+                    "type": "string",
+                    "maxLength": 8
+                  },
+                  "cidade": {
+                    "type": "string",
+                    "minLength": 3,
+                    "maxLength": 200
+                  },
+                  "uf": {
+                    "type": "string",
+                    "enum": [
+                      "AC",
+                      "AL",
+                      "AM",
+                      "AP",
+                      "BA",
+                      "CE",
+                      "DF",
+                      "ES",
+                      "GO",
+                      "MA",
+                      "MT",
+                      "MS",
+                      "MG",
+                      "PA",
+                      "PB",
+                      "PR",
+                      "PE",
+                      "PI",
+                      "RJ",
+                      "RN",
+                      "RO",
+                      "RS",
+                      "RR",
+                      "SC",
+                      "SE",
+                      "SP",
+                      "TO"
+                    ]
+                  },
+                  "nomeResponsavelContrato": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 200
+                  },
+                  "telefoneResponsavelContrato": {
+                    "type": "string",
+                    "minLength": 10,
+                    "maxLength": 12
+                  },
+                  "emailResponsavelContrato": {
+                    "type": "string",
+                    "format": "email",
+                    "minLength": 10,
+                    "maxLength": 200
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "parameters": [
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/status": {
+      "get": {
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "status": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
