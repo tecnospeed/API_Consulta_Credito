@@ -1,0 +1,763 @@
+{
+	"info": {
+		"_postman_id": "b39f8a68-75a5-430e-b0d4-6308de43862f",
+		"name": "Consulta crédito",
+		"description": "API de consulta crédito da Tecnospeed",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "consultas",
+			"item": [
+				{
+					"name": "assincrona",
+					"item": [
+						{
+							"name": "/consultas/assincrona/homologacao",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "cnpjSH",
+										"value": "01001001000113"
+									},
+									{
+										"key": "tokenSH",
+										"value": "CdEZhJcQJS9rRdkLnx2Kl67GhAeBx89X2hzgVQ8i"
+									},
+									{
+										"key": "login",
+										"value": "5724232"
+									},
+									{
+										"key": "password",
+										"value": "H0M0L0G4"
+									},
+									{
+										"key": "cnpjUsuario",
+										"value": "01001001000113"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codConsulta\": 1,\n    \"documento\": \"01001001000113\",\n    \"uf\": \"PR\"\n}"
+								},
+								"url": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/consultas/assincrona/homologacao"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "cnpjsh",
+												"value": "<string>"
+											},
+											{
+												"key": "tokensh",
+												"value": "<string>"
+											},
+											{
+												"key": "login",
+												"value": "<string>"
+											},
+											{
+												"key": "password",
+												"value": "<string>"
+											},
+											{
+												"key": "cnpjusuario",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"codConsulta\": \"<string>\",\n    \"documento\": \"<string>\",\n    \"uf\": \"<string>\"\n}"
+										},
+										"url": "{{baseUrl}}/consultas/assincrona/homologacao"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"protocolo\": \"<string>\",\n \"status\": \"<string>\",\n \"documento\": \"<string>\",\n \"codConsulta\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/consultas/assincrona",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "POST",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									},
+									{
+										"key": "login",
+										"value": "<string>"
+									},
+									{
+										"key": "password",
+										"value": "<string>"
+									},
+									{
+										"key": "cnpjusuario",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"codConsulta\": \"<string>\",\n    \"documento\": \"<string>\",\n    \"uf\": \"<string>\"\n}"
+								},
+								"url": "{{baseUrl}}/consultas/assincrona"
+							},
+							"response": [
+								{
+									"name": "Untitled Response",
+									"originalRequest": {
+										"method": "POST",
+										"header": [
+											{
+												"key": "cnpjsh",
+												"value": "<string>"
+											},
+											{
+												"key": "tokensh",
+												"value": "<string>"
+											},
+											{
+												"key": "login",
+												"value": "<string>"
+											},
+											{
+												"key": "password",
+												"value": "<string>"
+											},
+											{
+												"key": "cnpjusuario",
+												"value": "<string>"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json"
+											}
+										],
+										"body": {
+											"mode": "raw",
+											"raw": "{\n    \"codConsulta\": \"<string>\",\n    \"documento\": \"<string>\",\n    \"uf\": \"<string>\"\n}"
+										},
+										"url": "{{baseUrl}}/consultas/assincrona"
+									},
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										}
+									],
+									"cookie": [],
+									"body": "{\n \"protocolo\": \"<string>\",\n \"status\": \"<string>\",\n \"documento\": \"<string>\",\n \"codConsulta\": \"<string>\"\n}"
+								}
+							]
+						},
+						{
+							"name": "/consultas/assincrona",
+							"request": {
+								"auth": {
+									"type": "noauth"
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									},
+									{
+										"key": "cnpjUsuario",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/consultas/assincrona?protocolo=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"consultas",
+										"assincrona"
+									],
+									"query": [
+										{
+											"key": "protocolo",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "Default Response",
+									"originalRequest": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "cnpjsh",
+												"value": "<string>"
+											},
+											{
+												"key": "tokensh",
+												"value": "<string>"
+											},
+											{
+												"key": "cnpjUsuario",
+												"value": "<string>"
+											}
+										],
+										"url": {
+											"raw": "{{baseUrl}}/consultas/assincrona?protocolo=<string>",
+											"host": [
+												"{{baseUrl}}"
+											],
+											"path": [
+												"consultas",
+												"assincrona"
+											],
+											"query": [
+												{
+													"key": "protocolo",
+													"value": "<string>"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "text",
+									"header": [
+										{
+											"key": "Content-Type",
+											"value": "text/plain"
+										}
+									],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						}
+					],
+					"protocolProfileBehavior": {},
+					"_postman_isSubFolder": true
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "cadastros",
+			"item": [
+				{
+					"name": "/cadastros",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "cnpjsh",
+								"value": "01001001000113"
+							},
+							{
+								"key": "tokensh",
+								"value": "CdEZhJcQJS9rRdkLnx2Kl67GhAeBx89X2hzgVQ8i"
+							},
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nomeFantasia\": \"TESTE NOME FANTASIA\",\r\n  \"razaoSocial\":   \"TESTE RAZÃO SOCIAL\",\r\n  \"cnpj\" : \"00111111111111\",\r\n  \"nomeRepresentante\":   \"TESTE REPRESENTANTE\",\r\n  \"cpfRepresentante\":   \"11111111111\",\r\n  \"telefone\":   \"1111111111\",\r\n  \"email\":   \"TESTE@TESTE\",\r\n  \"endereco\":   \"TESTE ENDERECO\",\r\n  \"numeroEndereco\":   \"TESTE\",\r\n  \"complementoEndereco\":   \"TESTE COMPLEMENTO\",\r\n  \"bairro\":   \"TESTE BAIRRO\",\r\n  \"cep\":   \"88888888\",\r\n  \"cidade\":   \"TESTE\",\r\n  \"uf\":   \"PR\",\r\n  \"nomeResponsavelContrato\":   \"TESTE NOME RESP. ASSINATURA\",\r\n  \"telefoneResponsavelContrato\":   \"TESTE TELEFONE RESP. ASSINATURA\",\r\n  \"emailResponsavelContrato\":   \"TESTE_TESTE@TESTE.COM\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastros"
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nomeFantasia\": \"<string>\",\n    \"razaoSocial\": \"<string>\",\n    \"cnpj\": \"<string>\",\n    \"nomeRepresentante\": \"<string>\",\n    \"cpfRepresentante\": \"<string>\",\n    \"telefone\": \"<string>\",\n    \"nomeResponsavelContrato\": \"<string>\",\n    \"telefoneResponsavelContrato\": \"<string>\",\n    \"emailResponsavelContrato\": \"<email>\",\n    \"email\": \"<email>\",\n    \"endereco\": \"<string>\",\n    \"numeroEndereco\": \"<string>\",\n    \"complementoEndereco\": \"<string>\",\n    \"bairro\": \"<string>\",\n    \"cep\": \"<string>\",\n    \"cidade\": \"<string>\",\n    \"uf\": \"<string>\"\n}"
+								},
+								"url": "{{baseUrl}}/cadastros"
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"nomeFantasia\": \"<string>\",\n \"razaoSocial\": \"<string>\",\n \"cnpj\": \"<string>\",\n \"nomeRepresentante\": \"<string>\",\n \"cpfRepresentante\": \"<string>\",\n \"telefone\": \"<string>\",\n \"email\": \"<string>\",\n \"endereco\": \"<string>\",\n \"numeroEndereco\": \"<string>\",\n \"complementoEndereco\": \"<string>\",\n \"bairro\": \"<string>\",\n \"cep\": \"<string>\",\n \"cidade\": \"<string>\",\n \"uf\": \"<string>\",\n \"nomeResponsavelContrato\": \"<string>\",\n \"telefoneResponsavelContrato\": \"<string>\",\n \"emailResponsavelContrato\": \"<string>\",\n \"status\": \"<string>\"\n}"
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nomeFantasia\": \"<string>\",\n    \"razaoSocial\": \"<string>\",\n    \"cnpj\": \"<string>\",\n    \"nomeRepresentante\": \"<string>\",\n    \"cpfRepresentante\": \"<string>\",\n    \"telefone\": \"<string>\",\n    \"nomeResponsavelContrato\": \"<string>\",\n    \"telefoneResponsavelContrato\": \"<string>\",\n    \"emailResponsavelContrato\": \"<email>\",\n    \"email\": \"<email>\",\n    \"endereco\": \"<string>\",\n    \"numeroEndereco\": \"<string>\",\n    \"complementoEndereco\": \"<string>\",\n    \"bairro\": \"<string>\",\n    \"cep\": \"<string>\",\n    \"cidade\": \"<string>\",\n    \"uf\": \"<string>\"\n}"
+								},
+								"url": "{{baseUrl}}/cadastros"
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": \"<number>\",\n \"message\": \"<string>\"\n}"
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/json"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"nomeFantasia\": \"<string>\",\n    \"razaoSocial\": \"<string>\",\n    \"cnpj\": \"<string>\",\n    \"nomeRepresentante\": \"<string>\",\n    \"cpfRepresentante\": \"<string>\",\n    \"telefone\": \"<string>\",\n    \"nomeResponsavelContrato\": \"<string>\",\n    \"telefoneResponsavelContrato\": \"<string>\",\n    \"emailResponsavelContrato\": \"<email>\",\n    \"email\": \"<email>\",\n    \"endereco\": \"<string>\",\n    \"numeroEndereco\": \"<string>\",\n    \"complementoEndereco\": \"<string>\",\n    \"bairro\": \"<string>\",\n    \"cep\": \"<string>\",\n    \"cidade\": \"<string>\",\n    \"uf\": \"<string>\"\n}"
+								},
+								"url": "{{baseUrl}}/cadastros"
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": \"<number>\",\n \"message\": \"<string>\",\n \"errors\": [\n  {\n   \"message\": \"<string>\",\n   \"internalCode\": \"<number>\"\n  },\n  {\n   \"message\": \"<string>\",\n   \"internalCode\": \"<number>\"\n  }\n ]\n}"
+						}
+					]
+				},
+				{
+					"name": "/cadastros",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "cnpjsh",
+								"value": "01001001000113"
+							},
+							{
+								"key": "tokensh",
+								"value": "CdEZhJcQJS9rRdkLnx2Kl67GhAeBx89X2hzgVQ8i"
+							}
+						],
+						"url": {
+							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastros?cnpj=01001001000113",
+							"protocol": "http",
+							"host": [
+								"ecs-consulta-credito-api-1312101438",
+								"us-east-1",
+								"elb",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"cadastros"
+							],
+							"query": [
+								{
+									"key": "cnpj",
+									"value": "01001001000113"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cadastros?cnpj=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cadastros"
+									],
+									"query": [
+										{
+											"key": "cnpj",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": \"<number>\",\n \"message\": \"<string>\"\n}"
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cadastros?cnpj=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cadastros"
+									],
+									"query": [
+										{
+											"key": "cnpj",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"nomeFantasia\": \"<string>\",\n \"razaoSocial\": \"<string>\",\n \"cnpj\": \"<string>\",\n \"nomeRepresentante\": \"<string>\",\n \"cpfRepresentante\": \"<string>\",\n \"telefone\": \"<string>\",\n \"email\": \"<string>\",\n \"endereco\": \"<string>\",\n \"numeroEndereco\": \"<string>\",\n \"complementoEndereco\": \"<string>\",\n \"bairro\": \"<string>\",\n \"cep\": \"<string>\",\n \"cidade\": \"<string>\",\n \"uf\": \"<string>\",\n \"nomeResponsavelContrato\": \"<string>\",\n \"telefoneResponsavelContrato\": \"<string>\",\n \"emailResponsavelContrato\": \"<string>\",\n \"status\": \"<string>\"\n}"
+						},
+						{
+							"name": "Untitled Response",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "cnpjsh",
+										"value": "<string>"
+									},
+									{
+										"key": "tokensh",
+										"value": "<string>"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/cadastros?cnpj=<string>",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"cadastros"
+									],
+									"query": [
+										{
+											"key": "cnpj",
+											"value": "<string>"
+										}
+									]
+								}
+							},
+							"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+							"code": 422,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n \"code\": \"<number>\",\n \"message\": \"<string>\",\n \"errors\": [\n  {\n   \"message\": \"<string>\",\n   \"internalCode\": \"<number>\"\n  },\n  {\n   \"message\": \"<string>\",\n   \"internalCode\": \"<number>\"\n  }\n ]\n}"
+						}
+					]
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "/consumo",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "cnpjSH",
+						"value": "01001001000113"
+					},
+					{
+						"key": "tokenSH",
+						"value": "CdEZhJcQJS9rRdkLnx2Kl67GhAeBx89X2hzgVQ8i"
+					}
+				],
+				"url": {
+					"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/consumo?cnpj=01001001000113",
+					"protocol": "http",
+					"host": [
+						"ecs-consulta-credito-api-1312101438",
+						"us-east-1",
+						"elb",
+						"amazonaws",
+						"com"
+					],
+					"path": [
+						"consumo"
+					],
+					"query": [
+						{
+							"key": "cnpj",
+							"value": "01001001000113"
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Untitled Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cnpjsh",
+								"value": "<string>"
+							},
+							{
+								"key": "tokensh",
+								"value": "<string>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/consumo?cnpj=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"consumo"
+							],
+							"query": [
+								{
+									"key": "cnpj",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"searchs\": [\n  {\n   \"tipo\": \"<string>\",\n   \"documento\": \"<string>\",\n   \"status\": \"<string>\",\n   \"valor\": \"<number>\",\n   \"cadastro\": {\n    \"razaoSocial\": \"<string>\",\n    \"cnpj\": \"<string>\"\n   }\n  },\n  {\n   \"tipo\": \"<string>\",\n   \"documento\": \"<string>\",\n   \"status\": \"<string>\",\n   \"valor\": \"<number>\",\n   \"cadastro\": {\n    \"razaoSocial\": \"<string>\",\n    \"cnpj\": \"<string>\"\n   }\n  }\n ],\n \"metadata\": {\n  \"sum\": \"<number>\",\n  \"total\": \"<number>\"\n }\n}"
+				},
+				{
+					"name": "Untitled Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "cnpjsh",
+								"value": "<string>"
+							},
+							{
+								"key": "tokensh",
+								"value": "<string>"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/consumo?cnpj=<string>",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"consumo"
+							],
+							"query": [
+								{
+									"key": "cnpj",
+									"value": "<string>"
+								}
+							]
+						}
+					},
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"code\": \"<number>\",\n \"message\": \"<string>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "/status",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/status"
+			},
+			"response": [
+				{
+					"name": "Untitled Response",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseUrl}}/status"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						}
+					],
+					"cookie": [],
+					"body": "{\n \"status\": \"<string>\"\n}"
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"id": "baseUrl",
+			"key": "baseUrl",
+			"value": "http://localhost/",
+			"type": "string"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
