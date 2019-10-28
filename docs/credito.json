@@ -1,3 +1,6 @@
+// 20191028095948
+// http://localhost:3000/documentation/json
+
 {
   "openapi": "3.0.0",
   "info": {
@@ -47,11 +50,20 @@
                           "documento": {
                             "type": "string"
                           },
+                          "datahora": {
+                            "type": "string"
+                          },
                           "status": {
                             "type": "string"
                           },
                           "valor": {
                             "type": "number"
+                          },
+                          "protocolo": {
+                            "type": "string"
+                          },
+                          "data": {
+                            "type": "string"
                           },
                           "cadastro": {
                             "type": "object",
@@ -274,7 +286,7 @@
             }
           },
           {
-            "name": "cnpjUsuario",
+            "name": "cnpjusuario",
             "in": "header",
             "required": true,
             "schema": {
@@ -429,7 +441,7 @@
             }
           },
           {
-            "name": "cnpjUsuario",
+            "name": "cnpjusuario",
             "in": "header",
             "required": true,
             "schema": {
@@ -472,7 +484,7 @@
             }
           },
           {
-            "name": "cnpjUsuario",
+            "name": "cnpjusuario",
             "in": "header",
             "required": true,
             "schema": {
@@ -1145,6 +1157,704 @@
           },
           {
             "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/negativacao": {
+      "get": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "protocolo": {
+                      "type": "string"
+                    },
+                    "motivo": {
+                      "type": "string"
+                    },
+                    "cnpjCredor": {
+                      "type": "string"
+                    },
+                    "nome": {
+                      "type": "string"
+                    },
+                    "situacao": {
+                      "type": "string"
+                    },
+                    "documento": {
+                      "type": "string"
+                    },
+                    "endereco": {
+                      "type": "string"
+                    },
+                    "enderecoComplemento": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "municipio": {
+                      "type": "string"
+                    },
+                    "uf": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "valor": {
+                      "type": "string"
+                    },
+                    "divida": {
+                      "type": "object",
+                      "properties": {
+                        "nossoNumero": {
+                          "type": "string"
+                        },
+                        "especieTitulo": {
+                          "type": "string"
+                        },
+                        "numDocumento": {
+                          "type": "string"
+                        },
+                        "dataEmissao": {
+                          "type": "string"
+                        },
+                        "dataVencimento": {
+                          "type": "string"
+                        },
+                        "valorTitulo": {
+                          "type": "number"
+                        },
+                        "numAgencia": {
+                          "type": "string"
+                        },
+                        "numConta": {
+                          "type": "string"
+                        },
+                        "codBanco": {
+                          "type": "string"
+                        },
+                        "numCheque": {
+                          "type": "string"
+                        },
+                        "codEndosso": {
+                          "type": "string"
+                        },
+                        "codAlinea": {
+                          "type": "string"
+                        },
+                        "codAceite": {
+                          "type": "string"
+                        }
+                      }
+                    },
+                    "historico": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "valor": {
+                            "type": "number"
+                          },
+                          "tipoHistorico": {
+                            "type": "string"
+                          },
+                          "usuario": {
+                            "type": "string"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "protocolo",
+            "in": "query",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjusuario",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      },
+      "post": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "protocolo": {
+                      "type": "string"
+                    },
+                    "cnpjCredor": {
+                      "type": "string"
+                    },
+                    "motivo": {
+                      "type": "string"
+                    },
+                    "nome": {
+                      "type": "string"
+                    },
+                    "situacao": {
+                      "type": "string"
+                    },
+                    "documento": {
+                      "type": "string"
+                    },
+                    "endereco": {
+                      "type": "string"
+                    },
+                    "enderecoComplemento": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "municipio": {
+                      "type": "string"
+                    },
+                    "uf": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "valor": {
+                      "type": "string"
+                    },
+                    "divida": {
+                      "type": "object",
+                      "properties": {
+                        "nossoNumero": {
+                          "type": "string"
+                        },
+                        "especieTitulo": {
+                          "type": "string"
+                        },
+                        "numDocumento": {
+                          "type": "string"
+                        },
+                        "dataEmissao": {
+                          "type": "string"
+                        },
+                        "dataVencimento": {
+                          "type": "string"
+                        },
+                        "valorTitulo": {
+                          "type": "number"
+                        },
+                        "numAgencia": {
+                          "type": "string"
+                        },
+                        "numConta": {
+                          "type": "string"
+                        },
+                        "codBanco": {
+                          "type": "string"
+                        },
+                        "numCheque": {
+                          "type": "string"
+                        },
+                        "codEndosso": {
+                          "type": "string"
+                        },
+                        "codAlinea": {
+                          "type": "string"
+                        },
+                        "codAceite": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "cnpjCredor",
+                  "nome",
+                  "documento",
+                  "endereco",
+                  "bairro",
+                  "municipio",
+                  "uf",
+                  "cep",
+                  "divida"
+                ],
+                "properties": {
+                  "cnpjCredor": {
+                    "type": "string"
+                  },
+                  "nome": {
+                    "type": "string"
+                  },
+                  "documentoCredor": {
+                    "type": "string"
+                  },
+                  "endereco": {
+                    "type": "string"
+                  },
+                  "enderecoComplemento": {
+                    "type": "string"
+                  },
+                  "bairro": {
+                    "type": "string"
+                  },
+                  "municipio": {
+                    "type": "string"
+                  },
+                  "uf": {
+                    "type": "string"
+                  },
+                  "cep": {
+                    "type": "string"
+                  },
+                  "divida": {
+                    "type": "object",
+                    "required": [
+                      "nossoNumero",
+                      "numDocumento",
+                      "dataEmissao",
+                      "dataVencimento",
+                      "valorTitulo",
+                      "especieTitulo"
+                    ],
+                    "properties": {
+                      "nossoNumero": {
+                        "type": "string"
+                      },
+                      "especieTitulo": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3",
+                          "4",
+                          "5",
+                          "6"
+                        ]
+                      },
+                      "numDocumento": {
+                        "type": "string"
+                      },
+                      "dataEmissao": {
+                        "type": "string"
+                      },
+                      "dataVencimento": {
+                        "type": "string"
+                      },
+                      "valorTitulo": {
+                        "type": "number"
+                      },
+                      "numAgencia": {
+                        "type": "string"
+                      },
+                      "numConta": {
+                        "type": "string"
+                      },
+                      "codBanco": {
+                        "type": "string"
+                      },
+                      "numCheque": {
+                        "type": "string"
+                      },
+                      "codAlinea": {
+                        "type": "string",
+                        "enum": [
+                          "12",
+                          "13",
+                          "14"
+                        ]
+                      },
+                      "codEndosso": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2",
+                          "3"
+                        ]
+                      },
+                      "codAceite": {
+                        "type": "string",
+                        "enum": [
+                          "1",
+                          "2"
+                        ]
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "parameters": [
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjusuario",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ]
+      }
+    },
+    "/negativacao/remover": {
+      "post": {
+        "responses": {
+          "401": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "422": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "code": {
+                      "type": "number"
+                    },
+                    "message": {
+                      "type": "string"
+                    },
+                    "errors": {
+                      "type": "array",
+                      "items": {
+                        "type": "object",
+                        "properties": {
+                          "message": {
+                            "type": "string"
+                          },
+                          "internalCode": {
+                            "type": "number"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "2xx": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "protocolo": {
+                      "type": "string"
+                    },
+                    "cnpjCredor": {
+                      "type": "string"
+                    },
+                    "motivo": {
+                      "type": "string"
+                    },
+                    "nome": {
+                      "type": "string"
+                    },
+                    "situacao": {
+                      "type": "string"
+                    },
+                    "documento": {
+                      "type": "string"
+                    },
+                    "endereco": {
+                      "type": "string"
+                    },
+                    "enderecoComplemento": {
+                      "type": "string"
+                    },
+                    "bairro": {
+                      "type": "string"
+                    },
+                    "municipio": {
+                      "type": "string"
+                    },
+                    "uf": {
+                      "type": "string"
+                    },
+                    "cep": {
+                      "type": "string"
+                    },
+                    "valor": {
+                      "type": "string"
+                    },
+                    "divida": {
+                      "type": "object",
+                      "properties": {
+                        "nossoNumero": {
+                          "type": "string"
+                        },
+                        "especieTitulo": {
+                          "type": "string"
+                        },
+                        "numDocumento": {
+                          "type": "string"
+                        },
+                        "dataEmissao": {
+                          "type": "string"
+                        },
+                        "dataVencimento": {
+                          "type": "string"
+                        },
+                        "valorTitulo": {
+                          "type": "number"
+                        },
+                        "numAgencia": {
+                          "type": "string"
+                        },
+                        "numConta": {
+                          "type": "string"
+                        },
+                        "codBanco": {
+                          "type": "string"
+                        },
+                        "numCheque": {
+                          "type": "string"
+                        },
+                        "codEndosso": {
+                          "type": "string"
+                        },
+                        "codAlinea": {
+                          "type": "string"
+                        },
+                        "codAceite": {
+                          "type": "string"
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "required": [
+                  "protocolo",
+                  "codMotivo"
+                ],
+                "properties": {
+                  "protocolo": {
+                    "type": "string"
+                  },
+                  "codMotivo": {
+                    "type": "string",
+                    "enum": [
+                      "1",
+                      "2",
+                      "3",
+                      "4",
+                      "22"
+                    ]
+                  }
+                }
+              }
+            }
+          },
+          "required": true
+        },
+        "parameters": [
+          {
+            "name": "cnpjsh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "tokensh",
+            "in": "header",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          },
+          {
+            "name": "cnpjusuario",
             "in": "header",
             "required": true,
             "schema": {
