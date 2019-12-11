@@ -1510,7 +1510,6 @@
                             "schema": {
                                 "type": "object",
                                 "required": [
-                                    "cnpjCredor",
                                     "nome",
                                     "documento",
                                     "endereco",
@@ -1521,9 +1520,6 @@
                                     "divida"
                                 ],
                                 "properties": {
-                                    "cnpjCredor": {
-                                        "type": "string"
-                                    },
                                     "nome": {
                                         "type": "string"
                                     },
