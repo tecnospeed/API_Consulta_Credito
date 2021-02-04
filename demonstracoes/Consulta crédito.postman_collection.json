@@ -50,7 +50,7 @@
 									"raw": "{\n    \"codConsulta\": \"<string>\",\n    \"documento\": \"<string>\",\n    \"uf\": \"PR\",\n    \"retorno\": \"HTML\"\n}"
 								},
 								"url": {
-									"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/consultas/assincrona",
+									"raw": "https://api.consultanegativacao.com.br/v1/homologacao/consultas/assincrona",
 									"protocol": "http",
 									"host": [
 										"ecs-consulta-credito-api-1312101438",
@@ -147,7 +147,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/consultas/assincrona?protocolo=<string>",
+									"raw": "https://api.consultanegativacao.com.br/v1/homologacao/consultas/assincrona?protocolo=<string>",
 									"protocol": "http",
 									"host": [
 										"ecs-consulta-credito-api-1312101438",
@@ -257,7 +257,7 @@
 									"raw": "{\n    \"codConsulta\": \"<string>\",\n    \"documento\": \"<string>\",\n    \"uf\": \"<string>\",\n    \"retorno\": \"HTML\"\n}"
 								},
 								"url": {
-									"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/consultas/assincrona",
+									"raw": "https://api.consultanegativacao.com.br/v1/consultas/assincrona",
 									"protocol": "http",
 									"host": [
 										"ecs-consulta-credito-api-1312101438",
@@ -352,7 +352,7 @@
 									}
 								],
 								"url": {
-									"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/consultas/assincrona?protocolo=<string>",
+									"raw": "https://api.consultanegativacao.com.br/v1/consultas/assincrona?protocolo=<string>",
 									"protocol": "http",
 									"host": [
 										"ecs-consulta-credito-api-1312101438",
@@ -466,7 +466,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastros",
+							"raw": "https://api.consultanegativacao.com.br/v1/cadastros",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -631,7 +631,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastros?cnpj=<string>",
+							"raw": "https://api.consultanegativacao.com.br/v1/cadastros?cnpj=<string>",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -811,7 +811,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/cadastros",
+							"raw": "https://api.consultanegativacao.com.br/v1/homologacao/cadastros",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -977,7 +977,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/cadastros",
+							"raw": "https://api.consultanegativacao.com.br/v1/homologacao/cadastros",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1148,7 +1148,7 @@
 							"raw": "{\r\n \"nomeFantasia\": \"Tecnospeed\",\r\n \"razaoSocial\": \"Tecnospeed S/A\",\r\n \"cnpj\": \"01001001000113\",\r\n \"nomeRepresentante\": \"Nome\",\r\n \"cpfRepresentante\": \"99999999999\",\r\n \"telefone\": \"44999999999\",\r\n \"email\": \"contato@tecnospeed.com.br\",\r\n \"endereco\": \"Av Duque De Caxias\",\r\n \"numeroEndereco\": \"882\",\r\n \"complementoEndereco\": \"\",\r\n \"bairro\": \"Zona 7\",\r\n \"cep\": \"87020025\",\r\n \"cidade\": \"Maringá\",\r\n \"uf\": \"PR\",\r\n \"nomeResponsavelContrato\": \"Nome\",\r\n \"telefoneResponsavelContrato\": \"4499999999\",\r\n \"emailResponsavelContrato\": \"contato@tecnospeed.com.br\",\r\n \"taxas\": {\r\n    \"codConsulta1PF\": 8.34,\r\n    \"codConsulta2PF\": 33.47,\r\n    \"codConsulta3PF\": 27.47,\r\n    \"codConsulta4PF\": 4.40,\r\n    \"codConsulta1PJ\": 9.27,\r\n    \"codConsulta2PJ\": 33.71,\r\n    \"codConsulta3PJ\": 30.41,\r\n    \"codConsulta4PJ\": 4.82,\r\n    \"codConsultaNegativacao\": 9.92\r\n } \r\n}"
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastro/taxa",
+							"raw": "https://api.consultanegativacao.com.br/v1/cadastro/taxa",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1194,7 +1194,7 @@
 							"raw": "{\r\n \"nomeFantasia\": \"Tecnospeed\",\r\n \"razaoSocial\": \"Tecnospeed S/A\",\r\n \"cnpj\": \"01001001000113\",\r\n \"nomeRepresentante\": \"Nome\",\r\n \"cpfRepresentante\": \"99999999999\",\r\n \"telefone\": \"44999999999\",\r\n \"email\": \"contato@tecnospeed.com.br\",\r\n \"endereco\": \"Av Duque De Caxias\",\r\n \"numeroEndereco\": \"882\",\r\n \"complementoEndereco\": \"\",\r\n \"bairro\": \"Zona 7\",\r\n \"cep\": \"87020025\",\r\n \"cidade\": \"Maringá\",\r\n \"uf\": \"PR\",\r\n \"nomeResponsavelContrato\": \"Nome\",\r\n \"telefoneResponsavelContrato\": \"4499999999\",\r\n \"emailResponsavelContrato\": \"contato@tecnospeed.com.br\",\r\n \"taxas\": {\r\n    \"codConsulta1PF\": 8.34,\r\n    \"codConsulta2PF\": 33.47,\r\n    \"codConsulta3PF\": 27.47,\r\n    \"codConsulta4PF\": 4.40,\r\n    \"codConsulta1PJ\": 9.27,\r\n    \"codConsulta2PJ\": 33.71,\r\n    \"codConsulta3PJ\": 30.41,\r\n    \"codConsulta4PJ\": 4.82,\r\n    \"codConsultaNegativacao\": 9.92\r\n } \r\n}"
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/cadastro/taxa",
+							"raw": "https://api.consultanegativacao.com.br/v1/homologacao/cadastro/taxa",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1234,7 +1234,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastro/taxa?cnpj=?",
+							"raw": "https://api.consultanegativacao.com.br/v1/cadastro/taxa?cnpj=?",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1279,7 +1279,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/cadastro/taxa?cnpj=?",
+							"raw": "https://api.consultanegativacao.com.br/v1/cadastro/taxa?cnpj=?",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1349,7 +1349,7 @@
 							"raw": "{\r\n  \"protocolo\": \"string\",\r\n  \"codMotivo\": \"1\"\r\n}"
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/negativacao/remover",
+							"raw": "https://api.consultanegativacao.com.br/v1/negativacao/remover",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1407,7 +1407,7 @@
 							"raw": "{\r\n  \"nome\": \"string\",\r\n  \"documento\": \"string\",\r\n  \"endereco\": \"string\",\r\n  \"enderecoComplemento\": \"string\",\r\n  \"bairro\": \"string\",\r\n  \"municipio\": \"string\",\r\n  \"uf\": \"string\",\r\n  \"cep\": \"string\",\r\n  \"divida\": {\r\n    \"nossoNumero\": \"string\",\r\n    \"especieTitulo\": \"1\",\r\n    \"numDocumento\": \"string\",\r\n    \"dataEmissao\": \"string\",\r\n    \"dataVencimento\": \"string\",\r\n    \"valorTitulo\": 0,\r\n    \"numAgencia\": \"string\",\r\n    \"numConta\": \"string\",\r\n    \"codBanco\": \"string\",\r\n    \"numCheque\": \"string\",\r\n    \"codAlinea\": \"12\",\r\n    \"codEndosso\": \"1\",\r\n    \"codAceite\": \"1\"\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/negativacao",
+							"raw": "https://api.consultanegativacao.com.br/v1/negativacao",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1464,7 +1464,7 @@
 							"raw": "{\r\n  \"protocolo\": \"string\",\r\n  \"codMotivo\": \"1\"\r\n}"
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/negativacao/remover",
+							"raw": "https://api.consultanegativacao.com.br/v1/homologacao/negativacao/remover",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1523,7 +1523,7 @@
 							"raw": "{\r\n  \"nome\": \"string\",\r\n  \"documento\": \"string\",\r\n  \"endereco\": \"string\",\r\n  \"enderecoComplemento\": \"string\",\r\n  \"bairro\": \"string\",\r\n  \"municipio\": \"string\",\r\n  \"uf\": \"string\",\r\n  \"cep\": \"string\",\r\n  \"divida\": {\r\n    \"nossoNumero\": \"string\",\r\n    \"especieTitulo\": \"1\",\r\n    \"numDocumento\": \"string\",\r\n    \"dataEmissao\": \"string\",\r\n    \"dataVencimento\": \"string\",\r\n    \"valorTitulo\": 0,\r\n    \"numAgencia\": \"string\",\r\n    \"numConta\": \"string\",\r\n    \"codBanco\": \"string\",\r\n    \"numCheque\": \"string\",\r\n    \"codAlinea\": \"12\",\r\n    \"codEndosso\": \"1\",\r\n    \"codAceite\": \"1\"\r\n  }\r\n}"
 						},
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/negativacao",
+							"raw": "https://api.consultanegativacao.com.br/v1/negativacao",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1576,7 +1576,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/negativacao?protocolo=[protocolo obtido na requisição anterior]",
+							"raw": "https://api.consultanegativacao.com.br/v1/negativacao?protocolo=[protocolo obtido na requisição anterior]",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1635,7 +1635,7 @@
 							}
 						],
 						"url": {
-							"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/homologacao/negativacao?protocolo=[protocolo obtido na requisição anterior]",
+							"raw": "https://api.consultanegativacao.com.br/v1/homologacao/negativacao?protocolo=[protocolo obtido na requisição anterior]",
 							"protocol": "http",
 							"host": [
 								"ecs-consulta-credito-api-1312101438",
@@ -1679,7 +1679,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/consumo?cnpj=<string>",
+					"raw": "https://api.consultanegativacao.com.br/v1/consumo?cnpj=<string>",
 					"protocol": "http",
 					"host": [
 						"ecs-consulta-credito-api-1312101438",
@@ -1791,7 +1791,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://ecs-consulta-credito-api-1312101438.us-east-1.elb.amazonaws.com/status",
+					"raw": "https://api.consultanegativacao.com.br/v1/status",
 					"protocol": "http",
 					"host": [
 						"ecs-consulta-credito-api-1312101438",
